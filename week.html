@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jot’s Website</title>
+    <!-- Link to the favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!-- Inline CSS styles -->
+    <style>
+        /* CSS styles go here */
+        body {
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: #b7fcef;
+        }
+
+        header {
+            background-color: #b7fcef;
+            color: #0b0b0b;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            border: 1px solid #080808;
+            padding: 8px;
+            text-align: left;
+        }
+
+        form {
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header section -->
+    <header>
+        <h1>Welcome to Jot’s Website</h1>
+        <img src="https://tiimg.tistatic.com/co_logo/38045611/p-star-agro-products-v2.jpg" alt="Sample Image" style="width: 300px; height: auto;">
+
+    </header>
+    
+    <!-- Main content container -->
+    <div class="container">
+        <!-- Sample Table -->
+        <h2>Personal Information</h2>
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+            <tr>
+                <td>Harjot Saini</td>
+                <td>jot@pstar.in</td>
+            </tr>
+        </table>
+        
+        <!-- Contact Form -->
+        <h2>Contact Form</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name"><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email"><br><br>
+            
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <!-- HTML content -->
+    
+
+     <table border="1" style="width: 50%;">
+        <tr>
+            <th style="background-color: #f3f981;">Name</th>
+            <th style="background-color: #f3f981;">Gender</th>
+        </tr>
+        <tr>
+            <td>Data 1A</td>
+            <td>Data 1B</td>
+        </tr>
+        <tr>
+            <td>Data 2A</td>
+            <td>Data 2B</td>
+        </tr>
+    </table>
+
+    <form action="/submit" method="post" style="margin-top: 20px;">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" style="margin-right: 10px;"><br>
+        
+        <!-- ... Rest of the form elements ... -->
+        
+        <input type="submit" value="Submit" style="background-color: #4CAF50; color: #b7fcef;">
+    </form>
+
+    <!-- Vue.js component -->
+    <div id="app">
+        <h2>Vue.js Component</h2>
+        <div>
+            <p>{{ message }}</p>
+            <button @click="changeMessage">Change Message</button>
+        </div>
+    </div>
+    
+    <!-- Vue.js script -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@3.0.0/dist/vue.global.js"></script>
+    <script>
+        // Vue.js application
+        const app = Vue.createApp({
+            data() {
+                return {
+                    message: "Hello from Vue.js!"
+                }
+            },
+            methods: {
+                // Method to change the message
+                changeMessage() {
+                    this.message = "Message changed via Vue.js!";
+                }
+            }
+        });
+
+        // Mount Vue.js app to the specified element
+        app.mount('#app');
+    </script>
+</body>
+</html>
